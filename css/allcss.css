@@ -1,0 +1,90 @@
+/*lauran*/
+body{
+
+    background-color: rgb(34, 34, 34);
+}
+    h2 {
+    font-size: 40px;
+    border-bottom: 2px solid #423e3e;
+    }
+    h1 {
+    color: #fafafa;
+    font-size: 50px;
+    text-align: center;
+    background-color: rgb(61, 95, 30);
+    
+
+    
+    }
+    div > .col-4 {
+        background-color: rgb(240, 224, 195);
+        color: rgb(228, 75, 48);
+     
+    }
+  
+    footer {
+    font-size: 20px;
+    color: rgb(62, 84, 112);
+    text-align: center;
+    background-color:  color:  color: #fafafa;
+    border: solid 2px;
+    border-color: rgb(34, 34, 34)
+    }
+
+    .further-info {
+        clear: left;
+        padding: 40px 0;
+        background: rgb(177, 54, 32);
+       
+       
+      }
+
+      .further-info a {
+        width: 25%;
+        display: block;
+        float: left;
+      }
+
+      .further-info img {
+        max-width: 100%;
+        
+      }
+
+      .clearfix {
+        clear: both;
+      }
+
+  
+
+ /*timon*/
+.col > p {
+    text-decoration: wavy;
+}
+div > .col-2{
+   background-color: rgb(249, 250, 248);
+}
+.col > h2{
+text-decoration: double;
+}
+.navbar-brand > img{
+    width: 100px;
+}
+body > h1{
+    text-align: center;
+    font-size: 30;
+}
+footer > p{
+text-align: center;
+}
+div > .col{
+    background-color:rgb(230, 211, 195); 
+    color: rgb(233, 47, 0);
+}
+div > .center{
+    background-color: rgb(230, 211, 195);
+    color: rgb(233, 47, 0);
+}
+div > .mb-3{
+    color: black;
+}
+

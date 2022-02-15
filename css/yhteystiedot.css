@@ -1,0 +1,35 @@
+.col > p {
+    text-decoration: wavy;
+    color: red;
+}
+body{
+    background-color: rgb(34, 34, 34);
+}
+.col > h2{
+color: red;
+}
+label{
+    color: white;
+}
+.navbar-brand > img{
+    width: 100px;
+}
+body > h1{
+    text-align: center;
+    font-size: 30;
+   background-color:  rgb(61, 95, 30);
+   color: #fafafa;
+}
+
+footer > h2 {
+    text-align: center;
+    font-size: larger;
+    color: red;
+}
+body > div{
+
+}
+.col > ul{
+    color: white
+}
+

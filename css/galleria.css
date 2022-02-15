@@ -1,0 +1,77 @@
+    body > div {
+    background-color: rgb(34, 34, 34);
+    }
+    body >  {
+    background-color:  rgb(34, 34, 34);
+    }
+    h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #fafafa;
+    border-bottom: 2px solid #423e3e;
+    }
+    h1 {
+    color: #fafafa;
+    font-size: 50px;
+    text-align: center;
+    background-color: rgb(61, 95, 30);
+    }
+    div > .col-4 {
+    background-color: rgb(230, 211, 195);
+    color: rgb(233, 47, 0);
+    }
+    footer {
+    font-size: 20px;
+    color: rgb(62, 84, 112);
+    text-align: center;
+    background-color: rgb(249, 250, 248); 
+    border: solid 2px;
+    border-color: rgb(34, 34, 34)
+    }
+    img {
+    margin: auto;
+    display: block;
+    }
+    nav {
+        
+    font-size: 20px;
+    }
+    .col > p {
+        text-decoration: wavy;
+    }
+    div > .col-2{
+       background-color: rgb(249, 250, 248);
+    }
+    .col > h2{
+    text-decoration: double;
+    }
+    .navbar-brand > img{
+        width: 100px;
+    }
+    body > h1{
+        text-align: center;
+        font-size: 30;
+    }
+    footer > p{
+    text-align: center;
+    }
+    div > .col{
+        background-color:rgb(230, 211, 195); 
+        color: rgb(233, 47, 0);
+    }
+    div > .center{
+        background-color: rgb(230, 211, 195);
+        color: rgb(233, 47, 0);
+    }
+    div > .section {
+        background-color: rgb(34, 34, 34);
+        text-align: center;
+        float: center;
+    }
+    section {
+        background-color: rgb(34, 34, 34);
+    }
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }

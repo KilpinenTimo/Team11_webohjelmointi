@@ -1,0 +1,32 @@
+body {
+background-color: rgb(34, 34, 34);
+}
+h2 {
+font-size: 40px;
+border-bottom: 2px solid #423e3e;
+}
+h1 {
+color: #fafafa;
+font-size: 60px;
+text-align: center;
+background-color: rgb(61, 95, 30);
+}
+div {
+background-color: rgb(212, 199, 190);
+color: rgb(233, 47, 0);
+}
+footer {
+font-size: 20px;
+color: rgb(62, 84, 112);
+text-align: center;
+background-color: rgb(249, 250, 248); 
+border: solid 8px;
+border-color: rgb(34, 34, 34)
+}
+img {
+margin: auto;
+display: block;
+}
+nav {
+font-size: 25px;
+}

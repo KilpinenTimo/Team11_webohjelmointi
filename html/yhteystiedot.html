@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteystiedot</title>
+    <meta name="author" content="Timo Kilpinen">
+    <meta name="description" content="ravintolan yhteystiedot">
+    <meta name="keywords" content="team 11,ruoka,yhteystiedot">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="../css/allcss.css" rel="stylesheet" type="text/css">
+    <style>
+      body {
+  background-image: url("menukuvat/black.jpg");
+  background-color: rgb(41, 41, 41);
+  background-repeat: repeat;
+      }
+      .login-container{
+      float:right;
+      margin-right:100px;
+      }
+      footer > h2{
+    color: rgb(249, 250, 248);
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img src="LOGO.svg" width="100" height="30" alt="restaurant team 11 logo">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="index.html">Koti</a>
+              <a class="nav-link" href="menu.html">Menu</a>
+              <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
+              <a class="nav-link" href="galleria.html">Galleria</a>
+          </div>
+           <div class="ms-auto p-2">
+    <form action="../php/kirjaudu.php">
+      <input type="text" placeholder="Käyttäjätunnus" name="username">
+      <input type="text" placeholder="Salasana" name="psw"> 
+      <button type="submit">Kirjaudu</button>
+    </form>
+    </div>
+        <div class="navbar navbar-right">
+    <a href="rekisteroidy.html" class="btn btn-secondary" role="button" data-bs-toggle="button">Rekisteröidy</a>
+    </div>
+    </div>
+    </div>
+      </nav>
+<h1>Yhteystiedot</h1>
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h2> Osoite</h2>
+        <br>
+        <p style="color: black;">Ulitsa Promindustrii, 2, Stroitel'nyi, Respúblika Kómi, Venäjä, 169900</p>
+        <br>
+        <a href="https://www.google.com/maps/@67.4948515,64.071947,3a,75y,227.51h,87.02t/data=!3m6!1e1!3m4!1sTFvScyGf2l2JIkdgYm3K0A!2e0!7i13312!8i6656?hl=fi">Tule ja ihastu</a>
+      </div>
+      <div class="col">
+        <h2>Aukioloajat</h2>
+        <br>
+        <ul style="color: black;">
+         <li>Maanantai 10:30-22:00</li>
+         <li>Tiistai 10:30-22:00</li>
+         <li>Keskiviikko 10:30-22:00</li>
+         <li>Torstai 10:30-22:00</li>
+         <li>Perjantai 10:30-24:00</li>
+         <li>Lauantai 12:00-02:00</li>
+         <li>Sunnuntai 12:00-22:00</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<br>
+<footer style="position: static; left: 0; bottom: 0; width: 100%; top: auto; text-align: center;">
+  <h2>Seuraa meitä</h2>
+  <br>
+<div class="container">
+  <div class="row justify-content-md-center">
+  <div class="col" style="background-color:rgb(249, 250, 248);">
+     <a href="https://www.facebook.com/">
+    <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Facebook logo" style="width: 100px;height: 100px;">
+     </a>
+  </div>
+    <div class="col" style="background-color: rgb(249, 250, 248);">
+      <a href="https://www.instagram.com/">
+        <img src="https://play-lh.googleusercontent.com/h9jWMwqb-h9hjP4THqrJ50eIwPekjv7QPmTpA85gFQ10PjV02CoGAcYLLptqd19Sa1iJ" alt="instagram logo" style="width: 100px;height: 100px;">
+      </a>
+    </div>
+   <div class="col" style="background-color: rgb(249, 250, 248);">
+     <a href="https://www.youtube.com/">
+      <img src="https://www.youtube.com/img/desktop/yt_1200.png" alt="yotube logo" style="width: 100px;height: 100px;">
+      
+    </a>
+   </div>
+  </div>
+
+</div>
+
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
