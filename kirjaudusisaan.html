@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel='stylesheet' type='text/css' href='../css/tyyli.css'>
+<title>Kirjaudu sisään</title>
+
+</head>
+<body>
+<script>
+
+
+
+function lahetaKayttaja(lomake){
+var user=new Object();
+user.tunnus=lomake.tunnus.value;
+user.salasana=lomake.salasana.value;
+var jsonUser=JSON.stringify(user);
+
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+ if (this.readyState == 4 && this.status == 200) {
+   if (this.responseText=="ok"){
+    window.location.assign("../php/tervetuloa.php");
+   }
+   else{
+   document.getElementById("result").innerHTML = this.responseText;
+   }
+ }
+};
+xmlhttp.open("POST", "../php/kirjaudusisaan.php", true);
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.send("user=" + jsonUser);
+}
+</script>
+
+<h2>Kirjaudu sisään</h2>
+<form id='userlomake'>
+Käyttäjätunnus: <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus'><br>
+Salasana: <input type='password' name='salasana' value='' placeholder='Salasana'><br>
+<input type="checkbox" name="remember" id="remember">
+		<label for="remember-me">Muista minut tässä koneessa</label><br>
+		<br>
+<input type='button' name='ok' value='Kirjaudu sisään' onclick='lahetaKayttaja(this.form);'>
+<a href='unohditko.html'>Unohditko salasanasi?</a><br>
+<br>
+<a href='rekisteroidy.html'>Rekisteröidy</a>
+</form>
+
+<p id='result'>
+
+</p>
+
+</body>
+</html>
