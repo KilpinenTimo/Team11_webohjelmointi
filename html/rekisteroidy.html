@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ravintola Team 11</title>
+</head>
+<body>
+
+<!-- <div style=" width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: auto;">
+ -->
+
+
+<script>
+function lahetaKayttaja(lomake){
+	var user=new Object();
+	user.tunnus=lomake.tunnus.value;
+	user.salasana=lomake.salasana.value;
+		
+	user.nimi=lomake.nimi.value;
+	user.sposti=lomake.sposti.value;
+	user.osoite=lomake.osoite.value;
+	user.kaupunki=lomake.kaupunki.value;
+	user.puhelin=lomake.puhelin.value;
+	
+	
+	var jsonUser=JSON.stringify(user);
+	
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+		    document.getElementById("result").innerHTML = this.responseText;
+	  }
+	};
+	xmlhttp.open("POST", "../php/rekisteroidyajax.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("user=" + jsonUser);	
+}
+</script>
+
+<h2>Täytä tiedot!</h2>
+
+<p> Täyttämällä lomakkeen tiedot, pääset kirjoittamaan vieraskirjaamme. </p>
+
+<table>
+<form id='userlomake'>
+
+
+<tr>
+<p style="font-style: italic;"> Valitse käyttäjätunnus ja salasana. </p>
+<td>Kayttajatunnus: <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'>
+Salasana: <input style="margin-top: 15px;" type='password' name='salasana' value='' placeholder='Salasana...'><br>
+<br>
+<tr><td>Nimesi: <input type='text' name='nimi' value='' placeholder='nimesi.........'> <br>
+<tr><td>Sahkoposti: <input type='text' name='sposti' value='' placeholder='Sähköposti.....'><br>
+<tr><td>Katusoite:<input type='text' name='osoite' value='' placeholder='Lähiosoite......'><br> 
+<tr><td>Kaupunki: <input type='text' name='kaupunki' value='' placeholder='Kaupunki........'><br>
+<tr><td>Puhelin: <input type='text' name='puhelin' value='' placeholder='puhelin'><br>
+
+<br>
+<input style="background-color: #4CAF50;" type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'>
+<input style="margin-left: 15px; background-color: #f44336;" type="reset" name="eiok" value="Tyhjennä"/>
+
+</table>
+</form>
+<br>
+<form action="../html/index.html">
+<input type="submit" value="Takaisin etusivulle." />
+ </form>
+<p id='result'> 
+</p>
+
+</body>
+</html>
