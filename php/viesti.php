@@ -1,3 +1,11 @@
+<?php session_start();
+if (!isset($_SESSION["kayttaja"])) {
+   $_SESSION["paluuosoite"]="viesti.php";
+   header("location:../html/kirjaudusisaan.html");
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,14 +45,6 @@
 </head>
 <body>
 
-<?php
-//session_start();
-//if (!isset($_SESSION["user_ok"])) {
-//    $_SESSION["paluuosoite"]="viesti.php";
-//   header("location:kirjaudu.php");
-//  exit;}
-
-?>
 <div class="container">
     <div class="row">
  <div class="col-4 justify-content-center">                                         

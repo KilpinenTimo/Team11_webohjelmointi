@@ -8,12 +8,14 @@ $puhelinnumero=isset($_POST["puhelinnumero"]) ? $_POST["puhelinnumero"]:"";
 $viesti=isset($_POST["viesti"]) ? $_POST["viesti"]:"";
 
 if (empty($nimi) ||empty($email) || empty($puhelinnumero) || empty($viesti) ) {
-    header("location:../html/kirjaudu.html");
+    print "Huomaathan täyttää kaikki kentät!";
     exit;
 }
 
+
 try {
-    $yhteys=mysqli_connect("db","root","password","yhteydenotto");
+    $initials=parse_ini_file("../.ht.asetukset.ini");
+    $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]);
 }
 catch (Exception $e){
     header("location:../html/Yhteysvirhe.html");
@@ -32,6 +34,6 @@ mysqli_stmt_execute($stmt);
 mysqli_close($yhteys);
 ?>
 <?php 
-header("location:../html/kiitos.html");
+header("location:../php/viesti.php");
 
 ?>
