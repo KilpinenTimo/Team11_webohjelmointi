@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["kayttaja"])) {
+    $_SESSION["paluuosoite"]="lueviestit.php";
+   header("location:kirjaudu.php");
+  exit;}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +23,8 @@
     color: rgb(249, 250, 248);
     font: 14px;
     margin:auto;
-    width:50%
+   margin-top:30px;
+   margin-left:40%;
     }
     .keskella{
    text-align: center;
@@ -26,14 +35,6 @@
 </style>
 </head>
 <body>
-
-<?php
-//session_start();
-//if (!isset($_SESSION["user_ok"])) {
-//    $_SESSION["paluuosoite"]="lueviestit.php";
-//   header("location:kirjaudu.php");
-//  exit;}
-?>
 
 
 <?php 
@@ -57,8 +58,10 @@ while ($rivi=mysqli_fetch_object($tulos)) {
 print "</ol>";
 mysqli_close($yhteys);
 ?>
+
 </div>
 <div class="keskella">
+ <a href="../php/viesti.php" >Kirjoita viesti</a>
  <a href="../php/kirjauduulos.php" style="color:rgb(207, 3, 3);" >Kirjaudu ulos</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
