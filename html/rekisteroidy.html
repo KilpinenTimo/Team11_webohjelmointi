@@ -2,15 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ravintola Team 11</title>
+<title>Team 11</title>
 </head>
 <body>
-
-<!-- <div style=" width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: auto;">
- -->
 
 
 <script>
@@ -32,45 +26,63 @@ function lahetaKayttaja(lomake){
 	xmlhttp.onreadystatechange = function() {
 	  if (this.readyState == 4 && this.status == 200) {
 		    document.getElementById("result").innerHTML = this.responseText;
+		    
+		    if (this.responseText.trim()=="ohjataan kirjautusmissivulle") {
+		   	 	window.location.assign("../html/kirjaudusisaan.html"); 
+		    }
 	  }
 	};
+	
+	
+	
+	
 	xmlhttp.open("POST", "../php/rekisteroidyajax.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("user=" + jsonUser);	
 }
 </script>
 
-<h2>Täytä tiedot!</h2>
+<div style=" width: 300px;
+  border: 15px solid green;
+  padding: 30px;
+  margin: auto;">
+
+<h2>Rekisteröidy!</h2>
 
 <p> Täyttämällä lomakkeen tiedot, pääset kirjoittamaan vieraskirjaamme. </p>
 
+
 <table>
-<form id='userlomake'>
 
-
+<form>
 <tr>
-<p style="font-style: italic;"> Valitse käyttäjätunnus ja salasana. </p>
-<td>Kayttajatunnus: <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'>
-Salasana: <input style="margin-top: 15px;" type='password' name='salasana' value='' placeholder='Salasana...'><br>
+<p style="font-style: italic;"> Valitse käyttäjätunnus ja salasana (vahintaan 5 merkkiä). </p>
+<td>Kayttajatunnus: (*) <br><input type='text' name='tunnus' value='' placeholder='pakollinen'> <br>
+Salasana: (*) <br><input type='password' name='salasana' minlength="5" value='' placeholder='vahintaa 5 merkkia'><br>
 <br>
-<tr><td>Nimesi: <input type='text' name='nimi' value='' placeholder='nimesi.........'> <br>
-<tr><td>Sahkoposti: <input type='text' name='sposti' value='' placeholder='Sähköposti.....'><br>
-<tr><td>Katusoite:<input type='text' name='osoite' value='' placeholder='Lähiosoite......'><br> 
-<tr><td>Kaupunki: <input type='text' name='kaupunki' value='' placeholder='Kaupunki........'><br>
-<tr><td>Puhelin: <input type='text' name='puhelin' value='' placeholder='puhelin'><br>
-
+<tr><td>Nimesi: <br><input type='text' name='nimi' value='' placeholder='nimesi.........'> <br>
+<tr><td>Sahkoposti: (*) <br><input type='text' name='sposti' value='' placeholder='Sähköposti.....'><br>
+<tr><td>Katusoite:<br><input type='text' name='osoite' value='' placeholder='Lähiosoite......'><br> 
+<tr><td>Kaupunki: <br><input type='text' name='kaupunki' value='' placeholder='Kaupunki........'><br>
+<tr><td>Puhelin: <br><input type='text' name='puhelin' value='' placeholder='numeroita'><br>
+<p> *-merkityt tiedot ovat pakollisia </p> 
 <br>
 <input style="background-color: #4CAF50;" type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'>
-<input style="margin-left: 15px; background-color: #f44336;" type="reset" name="eiok" value="Tyhjennä"/>
+<input style="margin-left: 15px; background-color: #f44336;" type="reset" name="eiok" value="Tyhjennä">
 
 </table>
 </form>
 <br>
+
 <form action="../html/index.html">
 <input type="submit" value="Takaisin etusivulle." />
  </form>
-<p id='result'> 
-</p>
+ <br>
+ <form action="../php/luekayttajat.php">
+<input type="submit" value="Tarkista kayttajat." />
+ </form>
 
+<p id='result'> </p>
+</div>
 </body>
 </html>
