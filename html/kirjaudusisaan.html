@@ -4,12 +4,9 @@
 <meta charset="utf-8">
 <link rel='stylesheet' type='text/css' href='../css/tyyli.css'>
 <title>Kirjaudu sisään</title>
-
 </head>
 <body>
 <script>
-
-
 
 function lahetaKayttaja(lomake){
 var user=new Object();
@@ -34,22 +31,35 @@ xmlhttp.send("user=" + jsonUser);
 }
 </script>
 
-<h2>Kirjaudu sisään</h2>
-<form id='userlomake'>
-Käyttäjätunnus: <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus'><br>
-Salasana: <input type='password' name='salasana' value='' placeholder='Salasana'><br>
-<input type="checkbox" name="remember" id="remember">
-		<label for="remember-me">Muista minut tässä koneessa</label><br>
-		<br>
-<input type='button' name='ok' value='Kirjaudu sisään' onclick='lahetaKayttaja(this.form);'>
-<a href='unohditko.html'>Unohditko salasanasi?</a><br>
+<div style=" 
+width: 300px;
+box-shadow: 8px 8px;
+background: linear-gradient(to top, #ffffff 0%, #996633 130%);
+padding: 40px;
+margin: auto;
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+font-size: 13px;">
+
+<h2 style =" font-size: 30px; font-family: 'Open Sans', sans-serif;"> Kirjaudu sisään</h2> 
 <br>
-<a href='rekisteroidy.html'>Rekisteröidy</a>
+<form id='userlomake'>
+Käyttäjätunnus <br><input style="width: 300px;" type='text' name='tunnus' value='' placeholder=''><br>
+<br>
+Salasana <br><input style="width: 300px;" type='password' name='salasana' value='' placeholder=''><br>
+<p style=" font-style: italic;" id='result'></p>
+<br>
+<input type="checkbox" name="remember" id="remember">
+<label for="remember-me">Muista minut</label><br>
+<br>
+<input style=" width: 170px; height: 40px; background-color: black; color: white;" type='button' name='ok' value='Kirjaudu' onclick='lahetaKayttaja(this.form);'><br>
+<br><a href='unohditko.html'>Unohditko salasanasi?</a><br>
+<br>
+<br>
+<p>Eikö sinulla ole vielä tunnuksia?</p>
+<a href='rekisteroidy.html'>Rekisteröidy tästä</a>
 </form>
 
-<p id='result'>
-
-</p>
-
+</div>
 </body>
 </html>
